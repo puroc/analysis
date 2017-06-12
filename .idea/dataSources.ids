@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - analysis@localhost" uuid="b1ff0ea0-64c8-4474-8694-e4c8a87d0f66">
+    <database-info product="MySQL" version="5.7.10" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="analysis">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="cv"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="ios_private"/>
+      <schema id="5" name="mysql"/>
+      <schema id="6" name="performance_schema"/>
+      <schema id="7" name="sys"/>
+      <schema id="8" name="test"/>
+      <table id="9" parent="1" name="user"/>
+      <column id="10" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="11" parent="9" name="createdate">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="12" parent="9" name="name">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="13" parent="9" name="did">
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <key id="14" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
