@@ -18,21 +18,180 @@
       <schema id="7" name="sys"/>
       <schema id="8" name="test"/>
       <table id="9" parent="1" name="user"/>
-      <column id="10" parent="9" name="id">
+      <table id="10" parent="1" name="person"/>
+      <table id="11" parent="1" name="role"/>
+      <table id="12" parent="1" name="code"/>
+      <table id="13" parent="1" name="cost"/>
+      <table id="14" parent="1" name="project"/>
+      <table id="15" parent="1" name="sale"/>
+      <column id="16" parent="9" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="11" parent="9" name="createdate">
+      <column id="17" parent="9" name="createdate">
         <data-type>datetime|0</data-type>
       </column>
-      <column id="12" parent="9" name="name">
+      <column id="18" parent="9" name="name">
         <data-type>varchar(255)|0</data-type>
       </column>
-      <column id="13" parent="9" name="did">
+      <column id="19" parent="9" name="did">
         <data-type>bigint(20)|0</data-type>
       </column>
-      <key id="14" parent="9" name="PRIMARY">
+      <key id="20" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="22" parent="10" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="23" parent="10" name="role_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="24" parent="10" name="sex">
+        <mandatory>1</mandatory>
+        <data-type>varchar(5)|0</data-type>
+      </column>
+      <column id="25" parent="10" name="age">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="26" parent="10" name="skill_range_score">
+        <data-type>double|0</data-type>
+      </column>
+      <column id="27" parent="10" name="skill_deep_score">
+        <data-type>double|0</data-type>
+      </column>
+      <column id="28" parent="10" name="timestamp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="29" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="31" parent="11" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="32" parent="11" name="timestamp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="33" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="34" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="35" parent="12" name="type">
+        <comment>0、项目
+1、产品</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="36" parent="12" name="line_num">
+        <data-type>mediumtext|0</data-type>
+      </column>
+      <column id="37" parent="12" name="complex_rate">
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <column id="38" parent="12" name="timestamp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="39" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="41" parent="13" name="type">
+        <comment>0、房租
+1、物业
+2、工资
+3、五险一金
+4、活动
+5、差旅</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="42" parent="13" name="money">
+        <mandatory>1</mandatory>
+        <data-type>mediumtext|0</data-type>
+      </column>
+      <column id="43" parent="13" name="timestamp">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="44" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="46" parent="14" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="47" parent="14" name="desc">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="48" parent="14" name="workload">
+        <comment>单位:人天</comment>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="49" parent="14" name="risk">
+        <data-type>varchar(2000)|0</data-type>
+      </column>
+      <column id="50" parent="14" name="plan">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="51" parent="14" name="code_id">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="52" parent="14" name="timestamp">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <key id="53" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="54" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="55" parent="15" name="project_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="56" parent="15" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="57" parent="15" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
