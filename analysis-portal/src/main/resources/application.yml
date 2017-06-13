@@ -3,10 +3,17 @@ spring:
     url: jdbc:mysql://localhost:3306/analysis?characterEncoding=utf8
     username: root
     password: 123456
-#    执行初始化脚本
-#    schema: classpath:import.sql
+    #    执行初始化脚本
+    #    schema: classpath:import.sql
+  thymeleaf:
+    cache: false
 
 mybatis:
     type-aliases-package: com.emrubik.analysis.domain
     mapper-locations: classpath:/com/emrubik/analysis/mapper/*.xml
     config-location: classpath:/mybatis-config.xml
+
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
